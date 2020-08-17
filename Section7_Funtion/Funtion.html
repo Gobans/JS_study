@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*  
+    funtion 함수명([인자..[,인자]]){
+        코드
+        return 반환값
+    } */
+    
+    function numbering(num){
+        document.write(num + "</br>");
+    }
+    let b =3
+    for(let a = 3; a <10; a++){
+        numbering(b+a)
+    }
+
+    function get_member1(){
+        return 'mana';
+        return 'zkkzk';
+        // mana 하나만 return 됨
+    }
+    //output
+
+    function get_argument(arg){
+        return arg;
+    }
+    //input
+
+    test1 = function(){
+        document.write('test12')
+    }
+    
+    (function (){
+        let i=0
+        while(i<10){
+            document.write(i);
+            i +=1
+        }
+    })
+    //익명 함수
+
+    </script>
+</body>
+</html>

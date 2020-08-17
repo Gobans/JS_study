@@ -1,4 +1,4 @@
 # JS_study
 ##Made for java script study
 
-Start in 2020
+Start in 2020 08.14
