@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //객체 = dictionary , associative array , map..
+
+        let obj = {'local' : 'hey', 'monster': '몬무루', '자스':'리액트'}
+        console.log(obj['local'])
+        console.log(obj.local)
+
+        /* 
+        배열은 순서를 가지고 있음. but 객체는 순서가 없음
+         */
+
+        for (key in obj){
+            document.write("key : " + key + "value : " + obj[key] + "<br/>")
+        }
+
+        //배열도 가능
+
+        let arr = ['a','b','c']
+        for (num in arr){
+            document.write(arr[num] + "<br/>")
+        }
+
+        let grades = {
+            'list' : {'mh' : 100, 'ko' : 23, 'tab' : 12},
+            'show' : function(){
+                for(let k in this.list){
+                    console.log(k,this.list[k])
+                }
+                console.log(this.list)
+                //this는 자신을 포함한(둘러싼) 객체를 가르킨다.
+            }
+        }
+        document.write(grades['list']['mh'])
+        grades.show()
+        // grades['show'] 도 가능
+    </script>
+</body>
+</html>
