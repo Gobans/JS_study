@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let a = "a";
+    let pattern = /a/; //정규표현식 리터럴
+    pattern = new RegExp('a'); //정규표현식 객체 생성자
+    //위에 2가지 모두 같은 코드
+    document.write(pattern.exec('abcd') + "<br/>")
+    /* 
+    RegExp.exec() 추출
+    RegExp.test() 테스트
+     */
+    pattern = /a./;
+    document.write(pattern.exec('dcagx')+ "<br/>")
+    document.write(pattern.test('dcg')+ "<br/>")
+    document.write(pattern.test('asd')+ "<br/>")
+    
+    let str = 'abcdefga'
+    document.write( str.match(pattern)+"<br/>")
+    document.write( str.replace(pattern,"A")+"<br/>")
+
+    // match : 일치하는 문자 반환 replace는 변환
+
+    let xi = /a/
+    let oi = /a/ig
+    document.write( "Abcde".match(xi)+"<br/>")
+    document.write("Abcdea".match(oi)+"<br/>")
+    
+    // i는 대 소문자 모두 포함하게 만든다.
+
+    let xg = /a/
+    let og = /a/g
+    document.write("aacdea".match(xg)+"<br/>")
+    document.write("aacdea".match(og)+"<br/>")
+
+    // g는 문자열 하나가 아닌 모두를 추출한다.
+
+    //https://regexper.com/ 정규표현식 시각화
+    //https://regexr.com/ 정규표현식 빌드
+       
+
+    </script>
+    
+</body>
+</html>
