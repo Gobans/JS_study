@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function outter(){
+            let title = 'coding everybody'
+            return function(){
+                alert(title)
+            }
+        }
+
+        inner = outter()
+        inner()
+        // 외부함수는 이미 종료되었지만 내부함수를 통해 지역변수 접근이 가능하다 -> 클로저 
+
+        function factory_movie (title){
+            return {
+                get_title : function (){
+                    return title
+                },
+                set_title : function(_title){
+                    title = _title
+                }
+            }
+        }
+
+        interstella = factory_movie('interstella')
+        onepice = factory_movie('onepice')
+
+        console.log(interstella.get_title())
+        console.log(onepice.get_title())
+
+        interstella.set_title('hope')
+        console.log(interstella.get_title())
+        console.log(onepice.get_title())
+
+        //서로 다른 객체에 영향을 미치지 않음. interstella,onepice
+
+
+
+        let arr = []
+        for(let i = 0; i <5; i++){
+            arr[i] = function(id){
+                return function(){
+                    return id;
+                }
+            }(i)
+        }
+        for(let index in arr){
+            console.log(arr[index]())
+        }
+
+    </script>
+</body>
+</html>

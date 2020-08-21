@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let vscope = 'global'
+        function fscope(){
+            let vscope = 'local'
+            alert(vscope)
+        }
+        fscope()
+        // 함수는 가까운 변수를 사용한다.
+
+        let i = 5
+        
+        function a(){
+            let i = 10;
+            b()
+        }
+        function b(){
+            document.write(i)
+        }
+        a()
+
+        
+        /* 
+        변수 범위는 사용될 때가 아닌 정의 될 때 범위가 지정된다.
+        정적 유효범위, 렉시컬 유효범위
+        */
+    </script>
+</body>
+</html>
