@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(name){
+            this.name = name
+        }
+
+        Person.prototype.name = null
+        Person.prototype.introduce = function(){
+            return 'My name is' + this.name
+        }
+
+        function Programmer(name){
+            this.name = name
+        }
+
+        Programmer.prototype = new Person()
+        
+        let p1 = new Programmer('mh')
+        document.write(p1.introduce() + "<br/>")
+
+        // prototype 이라는 특수한 프로퍼티로 객체를 상속시킨다.
+        
+
+    </script>
+</body>
+</html>

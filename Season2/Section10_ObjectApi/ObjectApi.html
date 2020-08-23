@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let arr = ["a","b","c"]
+        // console.log('Object.keys(arr', Object.keys(arr))
+
+        let arr = ["a","b","c"]
+        console.log('Object.keys(arr)', Object.keys(arr))
+
+        let o = new Object()
+        console.log('o.toString()', o.toString())
+
+        let a = new Array(1,2,3)
+        console.log('a.toString()', a.toString())
+
+        Object.prototype.contain = function(needle){
+            for(let name in this){
+                if (this[name] == needle){
+                    return true
+                }
+            }
+            return false
+        }
+
+        let z = {'name':'mh', 'ciry' : 'seoul'}
+        console.log(z.contain('mh'))
+        
+        let v = ['mh','noll','guri']
+        console.log(v.contain('noll'))
+
+        // 그러나 이런식으로 메소드를 확장하면 객체에 자동으로 메소드가 추가된다.
+
+        for(let proper in z){
+            if(z.hasOwnProperty(proper)){
+                console.log(proper)
+            }
+        }
+
+
+    </script>
+</body>
+</html>

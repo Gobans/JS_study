@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function func(){
+            if(window === this){
+                document.write("window === this" + '<br/>')
+            }
+        }
+        func()
+
+        o = {
+            func : function(){
+                if(o === this){
+                    document.write("o === this" + '<br/>')
+                }
+            }
+        }
+        o.func()
+        //전역함수는 window 라는 전역객체안에 암묵적으로 포함됨 
+
+        let funcThis = null
+        
+        function Func(){
+            funcThis = this
+        }
+
+        let o1 = Func();
+        if(funcThis === window){
+            document.write('window </br>')
+        }
+
+        let o2 = new Func()
+        if(funcThis === o2){
+            document.write('o2</br>')
+        }
+        
+        //생성자로 함수 호출을 안하면 this = window 생성자로 호출하면 this = o2
+
+        
+
+    </script>
+</body>
+</html>

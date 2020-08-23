@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // let a = {'id':1}
+        // let b = a
+        // b.id = 2
+        // console.log(a.id)
+        //2
+
+        let a = {'id':1}
+        let b = a
+        b = {'id':2}
+        console.log(a.id)
+        
+        let c = 1
+        let d = a
+        d = 2
+        console.log(c)
+        
+        /* 
+        원시데이터가 아니라면 값을 참조 하기 떄문에 영향을 미친다.
+        b = {'id':2} 처럼 새로 객체를 생성하여 바꿔주어야 영향을 안미친다.
+         */
+
+    </script>
+</body>
+</html>
