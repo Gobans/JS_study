@@ -1,8 +1,12 @@
 # JS_study
 Made for record java script study
 
->JS_Basic_Syntax Start in 2020 08.14<br/>
+>JS_Basic_Syntax <br/>
+>Start in 2020 08.14<br/>
 >End in 2020.08.23
+
+>JS_ForWebBrowser<br/>
+>Strat in 2020.09.07
 
 # Lecture site
 >JS_Basic_Syntax<br/>
