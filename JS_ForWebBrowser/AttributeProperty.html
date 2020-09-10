@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="target" href="./demo.html"> ot </a>
+    <script src= "https://code.jquery.com/jquery.min.js"></script>
+    <script>
+        let target = document.getElementById('target')
+
+        console.log('target.href',target.href)
+        // file:///C:/Users/Colton/Documents/GitHub/JS_ForWebBrowser/demo.html
+        console.log('target.getAttribute("href")',target.getAttribute('href'))
+        //./demo.html
+        
+
+        /* Jquery */
+        let t = $('#target')
+        console.log(t.attr('href'))
+        t.attr('href', 'gobans.github.io')
+        console.log(t.attr('href'))
+
+        console.log(t.prop('href'))
+        //file:///C:/Users/Colton/Documents/GitHub/JS_ForWebBrowser/gobans.github.io
+        console.log(t.attr('href'))
+        //gobans.github.io
+
+    </script>
+</body>
+</html>

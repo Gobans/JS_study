@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <ul>
+        <li id="he">he</li>
+        <li>was</li>
+        <li>man</li>
+
+    </ul>
+    <script>
+        let ul = document.getElementsByTagName('ul')[0]
+        let lis = ul.getElementsByTagName('li')[1]
+        console.log(ul)
+        console.log(lis)
+
+        let li = document.getElementById('he')
+        li.style.color='red'
+    </script>
+</body>
+</html>

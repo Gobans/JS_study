@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>html</li>
+        <li>css</li>
+        <li id="active">JavaScript
+            <ul>
+                <li>JavaScript Core</li>
+                <li class ="marked">DOM</li>
+                <li class ="marked">BOM</li>
+            </ul>
+        </li>
+    </ul>
+    <script src = "https://code.jquery.com/jquery.min.js"></script>
+    <script>
+        // $('.marked','#active').css("background-color","red")
+        // $('#active .marked').css("background-color","red")
+        $('#active').find('.marked').eq(0).css("background-color","red")
+        //.eq() 인덱스로 요소 선택
+
+    </script>
+
+</body>
+</html>
