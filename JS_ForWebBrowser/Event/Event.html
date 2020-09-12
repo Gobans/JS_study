@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="target" value="button">
+    <script>
+        let t = document.getElementById('target')
+        t.onclick = function(event){
+            alert('hello world' +event.target.value)
+        }
+        /* 
+        t.onclick = function(event){
+            alert('2')
+        }
+        프로퍼티에 추가하는 방식으로는 복수로 이벤트 추가 불가
+         */
+        t.addEventListener('click',function(event){
+            alert('2')
+        })
+    </script>
+</body>
+</html>
