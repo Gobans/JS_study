@@ -6,7 +6,7 @@ Made for record java script study
 >>End in 2020.08.23
 
 >JS_ForWebBrowser<br/>
->>Strat in 2020.09.07
+>>Strat in 2020.09.07<br/>
 >>End in 2020.09.14
 
 # Lecture site
