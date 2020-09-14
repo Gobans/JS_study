@@ -7,6 +7,7 @@ Made for record java script study
 
 >JS_ForWebBrowser<br/>
 >>Strat in 2020.09.07
+>>End in 2020.09.14
 
 # Lecture site
 >JS_Basic_Syntax<br/>
